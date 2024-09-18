@@ -1,4 +1,4 @@
-# This script changes batches of 20 CW ticket status to >Closed for any status=Off Board tickets
+# This script changes batches of 20 CW tickets to a new target status (e.g. Closed) for any status="Off Board" tickets
 # which are older than 1st of last month and are not merged into another ticket 
 
 # Define credentials for authentication
@@ -55,7 +55,7 @@ catch {
     Write-Host $_.Exception.Message -ForegroundColor Red
 }
 
-# Loop on tickets and set to closed
+# Loop on tickets and set to target status
 foreach ($Ticket in $Tickets) {
     # Build update parameters
     $UpdateParam = @{
