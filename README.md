@@ -10,4 +10,6 @@ Will return and process all tickets matching
 
 Any ticket with a mergedParentTicket ID will be ignored
 
-Works in batches of 20
+Works in batches of 20 ($PageSize = 20)
+
+REQUIRES https://github.com/christaylorcodes/ConnectWiseManageAPI
