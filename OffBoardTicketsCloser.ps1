@@ -1,6 +1,8 @@
 # This script changes batches of 20 CW tickets to a new target status (e.g. Closed) for any status="Off Board" tickets
 # which are older than 1st of last month and are not merged into another ticket 
 
+# REQUIRES https://github.com/christaylorcodes/ConnectWiseManageAPI
+
 # Define credentials for authentication
 $ClientID = "<your clientID>"
 $PubKey = "<your public api key>"
@@ -86,3 +88,4 @@ catch {
     Write-Host "`nAn error occurred"
     Write-Host $_.Exception.Message -ForegroundColor Red
 }
+
